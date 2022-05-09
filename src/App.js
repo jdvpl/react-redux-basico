@@ -8,12 +8,14 @@ import {
   BrowserRouter,
   Routes,
   Route,
+  
 } from "react-router-dom";
 
 
 import Users from './Components/Users';
 import About from './Components/About';
 import Home from './Components/Home';
+import Header from './Components/Header';
 
 
 const mapDispathToProps=()=>({
@@ -31,8 +33,10 @@ function App() {
   return (
 
     <Provider store={store}>
+      
     <div className="App">
       <BrowserRouter>
+      <Header/>
         <Routes>
           <Route path="/" element={<ConectarComponente />}></Route>
           <Route path="/users" element={<Users />}></Route>

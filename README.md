@@ -9,3 +9,9 @@
     npm i react-router-dom
     npm i bootstrap
 ```
+
+### middle ware para crear los action, hacer dispatch
+
+```
+    npm i redux-thunk
+```

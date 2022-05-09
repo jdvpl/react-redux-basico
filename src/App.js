@@ -1,7 +1,9 @@
 import './App.css';
 
-import {Provider} from 'react-redux';
+import {Provider, connect} from 'react-redux';
 import {store} from './redux/config/store'
+import  counterActions  from './redux/actions/counter';
+
 import {
   BrowserRouter,
   Routes,
@@ -12,14 +14,27 @@ import {
 import Users from './Components/Users';
 import About from './Components/About';
 import Home from './Components/Home';
+
+
+const mapDispathToProps=()=>({
+  ...counterActions,
+})
+
+const mapStateToProps=({counter})=>({
+  counter
+})
+const ConectarComponente=connect(mapStateToProps,mapDispathToProps())(Home)
+
+
 function App() {
+ 
   return (
 
     <Provider store={store}>
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />}></Route>
+          <Route path="/" element={<ConectarComponente />}></Route>
           <Route path="/users" element={<Users />}></Route>
           <Route path="/about" element={<About />}></Route>
         </Routes>

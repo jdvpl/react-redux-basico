@@ -1,8 +1,12 @@
 import React from 'react'
 
-const Home = () => {
+const Home = ({counter,incrementarContador,decrementarContador}) => {
   return (
-    <div>Home</div>
+    <div>
+      <div className='card'>{counter.count}</div>
+      <button className='btn btn-outline-success' onClick={incrementarContador}>Incrementar</button>
+      <button className='btn btn-outline-danger' onClick={decrementarContador}>Decrementar</button>
+    </div>
   )
 }
 

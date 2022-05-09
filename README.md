@@ -19,5 +19,5 @@
 ## crear un tag con git
 
 ```
-    git tag -a v1.0 "configuracion de routing, redux y bootstrap, actions, reducers, connect"
+    git tag -a v1.0 -m "configuracion de routing, redux y bootstrap, actions, reducers, connect"
 ```

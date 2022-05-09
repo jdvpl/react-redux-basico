@@ -15,3 +15,9 @@
 ```
     npm i redux-thunk
 ```
+
+## crear un tag con git
+
+```
+    git tag -a v1.0 "configuracion de routing, redux y bootstrap, actions, reducers, connect"
+```
